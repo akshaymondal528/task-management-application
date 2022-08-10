@@ -1,0 +1,13 @@
+################## 10-08-2022 ##################
+CREATE TABLE IF NOT EXISTS users (
+    id BIGSERIAL PRIMARY KEY,
+    uid VARCHAR(100),
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email VARCHAR(100),
+    mobile VARCHAR(15),
+    password VARCHAR(250),
+    auth_key TEXT,
+    is_active BOOLEAN DEFAULT true,
+    timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
