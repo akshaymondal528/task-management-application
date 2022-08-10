@@ -24,6 +24,23 @@ exports.SUCCESS = {
             message: "User logout successfully!"
         },
     },
+    PROJECT: {
+        ADD_PROJECT: {
+            statuscode: this.STATUS_CODE.OK,
+            success: true,
+            message: "Project added successfully!"
+        },
+        GET_PROJECT: {
+            statuscode: this.STATUS_CODE.OK,
+            success: true,
+            message: "Project data!"
+        },
+        UPDATE_PROJECT: {
+            statuscode: this.STATUS_CODE.OK,
+            success: true,
+            message: "Project update successfully!"
+        },
+    },
 };
 
 exports.ERROR = {
@@ -67,6 +84,28 @@ exports.ERROR = {
             statuscode: this.STATUS_CODE.BADREQUEST,
             success: false,
             message: "User did not register!"
+        },
+    },
+    PROJECT: {
+        REQUIRED_PROJECT_ID: {
+            statuscode: this.STATUS_CODE.BADREQUEST,
+            success: false,
+            message: "Required project id!"
+        },
+        PROJECT_NOT_ADD: {
+            statuscode: this.STATUS_CODE.BADREQUEST,
+            success: false,
+            message: "Project did not add!"
+        },
+        PROJECT_NOT_FOUND: {
+            statuscode: this.STATUS_CODE.NOTFOUND,
+            success: false,
+            message: "Project did not found!"
+        },
+        PROJECT_NOT_UPDATE: {
+            statuscode: this.STATUS_CODE.NOTFOUND,
+            success: false,
+            message: "Project did not update!"
         },
     }
 }

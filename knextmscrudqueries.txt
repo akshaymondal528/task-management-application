@@ -11,3 +11,25 @@ CREATE TABLE IF NOT EXISTS users (
     is_active BOOLEAN DEFAULT true,
     timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+################## 10-08-2022 ##################
+CREATE TABLE IF NOT EXISTS projects (
+    id BIGSERIAL PRIMARY KEY,
+    uid VARCHAR(100),
+    user_id VARCHAR(100),
+    project TEXT,
+    is_complete BOOLEAN DEFAULT false,
+    is_active BOOLEAN DEFAULT true,
+    timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+################## 10-08-2022 ##################
+CREATE TABLE IF NOT EXISTS tasks (
+    id BIGSERIAL PRIMARY KEY,
+    uid VARCHAR(100),
+    project_id VARCHAR(100),
+    task TEXT,
+    is_complete BOOLEAN DEFAULT false,
+    is_active BOOLEAN DEFAULT true,
+    timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
