@@ -73,7 +73,6 @@ exports.updateProject = async (req) => {
         if (id && id !== '') whereObj.uid = id;
         if (projectid && projectid !== '') whereObj.uid = projectid;
         let updateProject = await knex('projects').update(reqData).where(whereObj);
-        console.log(updateProject);
         if (updateProject !== 1) return ERROR.PROJECT.PROJECT_NOT_UPDATE;
         SUCCESS.PROJECT.UPDATE_PROJECT.data = { uid: whereObj.uid };
         return SUCCESS.PROJECT.UPDATE_PROJECT;

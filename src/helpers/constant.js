@@ -41,6 +41,23 @@ exports.SUCCESS = {
             message: "Project update successfully!"
         },
     },
+    TASK: {
+        ADD_TASK: {
+            statuscode: this.STATUS_CODE.OK,
+            success: true,
+            message: "Task added successfully!"
+        },
+        GET_TASK: {
+            statuscode: this.STATUS_CODE.OK,
+            success: true,
+            message: "Task data!"
+        },
+        UPDATE_TASK: {
+            statuscode: this.STATUS_CODE.OK,
+            success: true,
+            message: "Task update successfully!"
+        },
+    },
 };
 
 exports.ERROR = {
@@ -106,6 +123,28 @@ exports.ERROR = {
             statuscode: this.STATUS_CODE.NOTFOUND,
             success: false,
             message: "Project did not update!"
+        },
+    },
+    TASK: {
+        REQUIRED_TASK_ID: {
+            statuscode: this.STATUS_CODE.BADREQUEST,
+            success: false,
+            message: "Required task id!"
+        },
+        TASK_NOT_ADD: {
+            statuscode: this.STATUS_CODE.BADREQUEST,
+            success: false,
+            message: "Task did not add!"
+        },
+        TASK_NOT_FOUND: {
+            statuscode: this.STATUS_CODE.NOTFOUND,
+            success: false,
+            message: "Task did not found!"
+        },
+        TASK_NOT_UPDATE: {
+            statuscode: this.STATUS_CODE.NOTFOUND,
+            success: false,
+            message: "Task did not update!"
         },
     }
 }
